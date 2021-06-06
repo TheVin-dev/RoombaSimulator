@@ -1,0 +1,1 @@
+Invoking command in '/home/student/dev_ws/build/py_parameters': PYTHONPATH=/home/student/dev_ws/install/py_parameters/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/py_parameters --uninstall --editable --build-directory /home/student/dev_ws/build/py_parameters/build

@@ -1,0 +1,19 @@
+[0.069s] Invoking command in '/home/student/dev_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/src/turtlebot3_simulations/turtlebot3_fake_node -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/turtlebot3_fake_node
+[1.277s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.278s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.278s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.278s] -- Found geometry_msgs: 2.0.3 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.279s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.279s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.280s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.280s] -- Found nav_msgs: 2.0.3 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.280s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.281s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.282s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.283s] -- Found sensor_msgs: 2.0.3 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.283s] -- Found tf2: 0.13.9 (/opt/ros/foxy/share/tf2/cmake)
+[1.283s] -- Found tf2_msgs: 0.13.9 (/opt/ros/foxy/share/tf2_msgs/cmake)
+[1.283s] -- Found turtlebot3_msgs: 2.2.1 (/opt/ros/foxy/share/turtlebot3_msgs/cmake)
+[1.383s] -- Configuring done
+[1.403s] -- Generating done
+[1.404s] -- Build files have been written to: /home/student/dev_ws/build/turtlebot3_fake_node

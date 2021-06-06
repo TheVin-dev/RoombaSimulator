@@ -1,0 +1,36 @@
+-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found example_interfaces: 0.9.0 (/opt/ros/foxy/share/example_interfaces/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/student/dev_ws/build/cpp_srvcli
+[ 50%] [32m[1mLinking CXX executable server[0m
+[ 50%] [32m[1mLinking CXX executable client[0m
+[ 75%] Built target server
+[100%] Built target client
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/server
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/client
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/package_run_dependencies/cpp_srvcli
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/parent_prefix_path/cpp_srvcli
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.sh
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.dsv
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.sh
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.dsv
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.bash
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.sh
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.zsh
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.dsv
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.dsv
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/packages/cpp_srvcli
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig.cmake
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig-version.cmake
+-- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.xml

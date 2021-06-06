@@ -1,0 +1,42 @@
+[0.063s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+[0.917s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.917s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.918s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.918s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.918s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.918s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.918s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.918s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.918s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.990s] -- Found example_interfaces: 0.9.0 (/opt/ros/foxy/share/example_interfaces/cmake)
+[1.376s] -- Configuring done
+[1.398s] -- Generating done
+[1.402s] -- Build files have been written to: /home/student/dev_ws/build/cpp_srvcli
+[1.415s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+[1.419s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+[1.567s] [ 50%] [32m[1mLinking CXX executable server[0m
+[1.568s] [ 50%] [32m[1mLinking CXX executable client[0m
+[1.775s] [ 75%] Built target server
+[1.792s] [100%] Built target client
+[1.806s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+[1.838s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli
+[1.847s] -- Install configuration: ""
+[1.848s] -- Execute custom install script
+[1.848s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/server
+[1.860s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/client
+[1.870s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/package_run_dependencies/cpp_srvcli
+[1.880s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/parent_prefix_path/cpp_srvcli
+[1.889s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.sh
+[1.900s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.dsv
+[1.909s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.sh
+[1.918s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.dsv
+[1.928s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.bash
+[1.938s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.sh
+[1.949s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.zsh
+[1.961s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.dsv
+[1.973s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.dsv
+[1.982s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/packages/cpp_srvcli
+[1.992s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig.cmake
+[2.003s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig-version.cmake
+[2.013s] -- Symlinking: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.xml
+[2.024s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli

@@ -1,0 +1,40 @@
+running egg_info
+creating ../../build/RoomboSimator/RoomboSimator.egg-info
+writing ../../build/RoomboSimator/RoomboSimator.egg-info/PKG-INFO
+writing dependency_links to ../../build/RoomboSimator/RoomboSimator.egg-info/dependency_links.txt
+writing entry points to ../../build/RoomboSimator/RoomboSimator.egg-info/entry_points.txt
+writing requirements to ../../build/RoomboSimator/RoomboSimator.egg-info/requires.txt
+writing top-level names to ../../build/RoomboSimator/RoomboSimator.egg-info/top_level.txt
+writing manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+reading manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+writing manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/dev_ws/build/RoomboSimator/build
+creating /home/student/dev_ws/build/RoomboSimator/build/lib
+creating /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+copying RoomboSimator/statemachine.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+copying RoomboSimator/Robot.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+copying RoomboSimator/BatteryManagement.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+copying RoomboSimator/__init__.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+running install
+running install_lib
+creating /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/statemachine.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/Robot.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/BatteryManagement.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/__init__.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/statemachine.py to statemachine.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/Robot.py to Robot.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/BatteryManagement.py to BatteryManagement.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/student/dev_ws/install/RoomboSimator/share/ament_index
+creating /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index
+creating /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index/packages
+copying resource/RoomboSimator -> /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index/packages
+copying package.xml -> /home/student/dev_ws/install/RoomboSimator/share/RoomboSimator
+running install_egg_info
+Copying ../../build/RoomboSimator/RoomboSimator.egg-info to /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/student/dev_ws/build/RoomboSimator/install.log'

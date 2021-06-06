@@ -1,0 +1,4 @@
+Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli
+Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli

@@ -1,0 +1,4 @@
+CMake Error at CMakeLists.txt:24 (add_executables):
+  Unknown CMake command "add_executables".
+
+

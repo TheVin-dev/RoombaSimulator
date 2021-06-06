@@ -1,0 +1,44 @@
+[0.013s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+[0.061s] -- The C compiler identification is GNU 9.3.0
+[0.107s] -- The CXX compiler identification is GNU 9.3.0
+[0.112s] -- Check for working C compiler: /usr/bin/cc
+[0.173s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.174s] -- Detecting C compiler ABI info
+[0.230s] -- Detecting C compiler ABI info - done
+[0.243s] -- Detecting C compile features
+[0.243s] -- Detecting C compile features - done
+[0.245s] -- Check for working CXX compiler: /usr/bin/c++
+[0.315s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.316s] -- Detecting CXX compiler ABI info
+[0.393s] -- Detecting CXX compiler ABI info - done
+[0.406s] -- Detecting CXX compile features
+[0.407s] -- Detecting CXX compile features - done
+[0.408s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.428s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.428s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.584s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.618s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.625s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.686s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.710s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.773s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.820s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.821s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.822s] -- Looking for pthread.h
+[0.888s] -- Looking for pthread.h - found
+[0.888s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.951s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.951s] -- Looking for pthread_create in pthreads
+[1.006s] -- Looking for pthread_create in pthreads - not found
+[1.006s] -- Looking for pthread_create in pthread
+[1.074s] -- Looking for pthread_create in pthread - found
+[1.076s] -- Found Threads: TRUE  
+[1.210s] -- Found example_interfaces: 0.9.0 (/opt/ros/foxy/share/example_interfaces/cmake)
+[1.322s] CMake Error at CMakeLists.txt:24 (add_executables):
+[1.322s]   Unknown CMake command "add_executables".
+[1.323s] 
+[1.323s] 
+[1.324s] -- Configuring incomplete, errors occurred!
+[1.324s] See also "/home/student/dev_ws/build/cpp_srvcli/CMakeFiles/CMakeOutput.log".
+[1.324s] See also "/home/student/dev_ws/build/cpp_srvcli/CMakeFiles/CMakeError.log".
+[1.330s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli

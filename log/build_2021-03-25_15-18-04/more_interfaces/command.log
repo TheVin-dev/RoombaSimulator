@@ -1,0 +1,2 @@
+Invoking command in '/home/student/dev_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12
+Invoked command in '/home/student/dev_ws/build/more_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12

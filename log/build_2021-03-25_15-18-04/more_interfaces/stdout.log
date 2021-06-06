@@ -1,0 +1,10 @@
+[  3%] Built target more_interfaces__cpp
+[ 12%] Built target more_interfaces__rosidl_generator_c
+[ 36%] Built target more_interfaces__rosidl_typesupport_cpp
+[ 39%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[ 39%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[ 48%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 57%] Built target more_interfaces__rosidl_typesupport_c
+[ 66%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[ 66%] Built target more_interfaces
+[ 69%] Built target more_interfaces__py

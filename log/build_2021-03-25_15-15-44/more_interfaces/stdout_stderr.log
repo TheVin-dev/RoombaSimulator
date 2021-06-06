@@ -1,0 +1,23 @@
+[  3%] Built target more_interfaces__cpp
+[ 12%] Built target more_interfaces__rosidl_generator_c
+[ 39%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[ 39%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[ 39%] Built target more_interfaces__rosidl_typesupport_cpp
+[ 48%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 57%] Built target more_interfaces__rosidl_typesupport_c
+[ 66%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[ 66%] Built target more_interfaces
+[ 69%] Built target more_interfaces__py
+[ 72%] [32mBuilding CXX object CMakeFiles/publish_adress_book.dir/src/publish_adress_book.cpp.o[0m
+[35m[1mScanning dependencies of target more_interfaces__python[0m
+[ 75%] [32mBuilding C object CMakeFiles/more_interfaces__python.dir/rosidl_generator_py/more_interfaces/msg/_adress_book_s.c.o[0m
+[01m[K/home/student/dev_ws/src/more_interfaces/src/publish_adress_book.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kmore_interfaces/msg/address_book.hpp: No such file or directory
+    5 | #include [01;31m[K"more_interfaces/msg/address_book.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/publish_adress_book.dir/build.make:63: CMakeFiles/publish_adress_book.dir/src/publish_adress_book.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:331: CMakeFiles/publish_adress_book.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 78%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/libmore_interfaces__python.so[0m
+[ 78%] Built target more_interfaces__python
+make: *** [Makefile:141: all] Error 2

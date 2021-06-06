@@ -1,0 +1,6 @@
+source;share/roombasimulator/hook/pythonpath.ps1
+source;share/roombasimulator/hook/pythonpath.dsv
+source;share/roombasimulator/hook/pythonpath.sh
+source;share/roombasimulator/hook/ament_prefix_path.ps1
+source;share/roombasimulator/hook/ament_prefix_path.dsv
+source;share/roombasimulator/hook/ament_prefix_path.sh

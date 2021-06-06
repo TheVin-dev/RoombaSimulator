@@ -1,0 +1,46 @@
+[0.012s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+[0.025s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.049s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.213s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.244s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.247s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.360s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.406s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.407s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.539s] -- Found example_interfaces: 0.9.0 (/opt/ros/foxy/share/example_interfaces/cmake)
+[0.690s] -- Configuring done
+[0.699s] -- Generating done
+[0.700s] -- Build files have been written to: /home/student/dev_ws/build/cpp_srvcli
+[0.706s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+[0.709s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+[0.745s] [35m[1mScanning dependencies of target server[0m
+[0.745s] [35m[1mScanning dependencies of target client[0m
+[0.782s] [ 50%] [32mBuilding CXX object CMakeFiles/client.dir/src/add_two_ints_client.cpp.o[0m
+[0.782s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/add_two_ints_server.cpp.o[0m
+[2.694s] [ 75%] [32m[1mLinking CXX executable server[0m
+[2.839s] [ 75%] Built target server
+[2.944s] [100%] [32m[1mLinking CXX executable client[0m
+[3.066s] [100%] Built target client
+[3.075s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_srvcli -- -j12 -l12
+[3.109s] Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli
+[3.117s] -- Install configuration: ""
+[3.117s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/server
+[3.118s] -- Set runtime path of "/home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/server" to ""
+[3.118s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/client
+[3.118s] -- Set runtime path of "/home/student/dev_ws/install/cpp_srvcli/lib/cpp_srvcli/client" to ""
+[3.119s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/package_run_dependencies/cpp_srvcli
+[3.119s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/parent_prefix_path/cpp_srvcli
+[3.119s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.sh
+[3.119s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/ament_prefix_path.dsv
+[3.119s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.sh
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/environment/path.dsv
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.bash
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.sh
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.zsh
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/local_setup.dsv
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.dsv
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/ament_index/resource_index/packages/cpp_srvcli
+[3.120s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig.cmake
+[3.121s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/cmake/cpp_srvcliConfig-version.cmake
+[3.121s] -- Installing: /home/student/dev_ws/install/cpp_srvcli/share/cpp_srvcli/package.xml
+[3.123s] Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_srvcli

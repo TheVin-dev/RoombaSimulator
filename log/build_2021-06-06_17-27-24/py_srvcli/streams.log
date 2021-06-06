@@ -1,0 +1,3 @@
+[1.292s] Invoking command in '/home/student/dev_ws/build/py_srvcli': PYTHONPATH=/home/student/dev_ws/install/py_srvcli/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/py_srvcli --uninstall --editable --build-directory /home/student/dev_ws/build/py_srvcli/build
+[1.341s] /usr/bin/python3: can't open file 'setup.py': [Errno 2] No such file or directory
+[1.350s] Invoked command in '/home/student/dev_ws/build/py_srvcli' returned '2': PYTHONPATH=/home/student/dev_ws/install/py_srvcli/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/py_srvcli --uninstall --editable --build-directory /home/student/dev_ws/build/py_srvcli/build

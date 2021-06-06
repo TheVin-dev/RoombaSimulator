@@ -1,0 +1,53 @@
+[0.066s] Invoking command in '/home/student/dev_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/src/cpp_pubsub -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_pubsub
+[0.914s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.914s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.914s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.915s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.915s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.915s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.915s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.916s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.916s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.995s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.091s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.092s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.092s] -- Configured cppcheck include dirs: 
+[1.093s] -- Configured cppcheck exclude dirs and/or files: 
+[1.094s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.094s] -- Configured cpplint exclude dirs and/or files: 
+[1.094s] -- Added test 'lint_cmake' to check CMake code style
+[1.097s] -- Added test 'uncrustify' to check C / C++ code style
+[1.097s] -- Configured uncrustify additional arguments: 
+[1.097s] -- Added test 'xmllint' to check XML markup files
+[1.101s] -- Configuring done
+[1.124s] -- Generating done
+[1.127s] -- Build files have been written to: /home/student/dev_ws/build/cpp_pubsub
+[1.137s] Invoked command in '/home/student/dev_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/src/cpp_pubsub -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_pubsub
+[1.141s] Invoking command in '/home/student/dev_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_pubsub -- -j12 -l12
+[1.420s] [ 25%] [32m[1mLinking CXX executable listener[0m
+[1.420s] [ 50%] [32m[1mLinking CXX executable talker[0m
+[1.508s] [ 75%] Built target talker
+[1.675s] [100%] Built target listener
+[1.705s] Invoked command in '/home/student/dev_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/cpp_pubsub -- -j12 -l12
+[1.747s] Invoking command in '/home/student/dev_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_pubsub
+[1.762s] -- Install configuration: ""
+[1.762s] -- Execute custom install script
+[1.762s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[1.775s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/lib/cpp_pubsub/listener
+[1.784s] -- Up-to-date symlink: /home/student/dev_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[1.785s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[1.794s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[1.804s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[1.815s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[1.825s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[1.835s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[1.846s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[1.857s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[1.866s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[1.876s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[1.890s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[1.899s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[1.908s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[1.917s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[1.927s] -- Symlinking: /home/student/dev_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[1.941s] Invoked command in '/home/student/dev_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/dev_ws/install/roombasimulator:/home/student/dev_ws/install/py_srvcli:/home/student/dev_ws/install/py_pubsub:/home/student/dev_ws/install/py_parameters:/home/student/dev_ws/install/my_package:/home/student/dev_ws/install/RoomboSimator:/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/cpp_pubsub

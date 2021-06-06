@@ -1,0 +1,212 @@
+[0.010s] Invoking command in '/home/student/dev_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12
+[0.031s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.046s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.046s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.178s] -- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.179s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.182s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.282s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.299s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.338s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.339s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.464s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") 
+[0.546s] -- Found ament_cmake_ros: 0.9.1 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.615s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.619s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.636s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3.5") 
+[0.637s] -- Found python_cmake_module: 0.8.0 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[0.653s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.653s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[0.653s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[0.669s] -- Configuring done
+[0.693s] -- Generating done
+[0.695s] -- Build files have been written to: /home/student/dev_ws/build/more_interfaces
+[0.714s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.722s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.887s] [35m[1mScanning dependencies of target more_interfaces__rosidl_generator_c[0m
+[0.893s] [  6%] Built target more_interfaces__cpp
+[0.895s] [  9%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_generator_c.dir/rosidl_generator_c/more_interfaces/msg/detail/address_book__functions.c.o[0m
+[0.901s] [ 18%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.901s] [ 18%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.901s] [ 18%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.927s] [ 21%] [32m[1mLinking C shared library libmore_interfaces__rosidl_generator_c.so[0m
+[0.956s] [ 21%] Built target more_interfaces__rosidl_generator_c
+[0.965s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.966s] [ 27%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.084s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_cpp[0m
+[1.095s] [ 30%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/more_interfaces/msg/address_book__type_support.cpp.o[0m
+[1.098s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_introspection_cpp[0m
+[1.108s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.108s] [ 33%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/more_interfaces/msg/detail/address_book__type_support.cpp.o[0m
+[1.118s] [ 36%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/more_interfaces/msg/detail/dds_fastrtps/address_book__type_support.cpp.o[0m
+[1.154s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_c[0m
+[1.163s] [ 39%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/more_interfaces/msg/address_book__type_support.cpp.o[0m
+[1.171s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_introspection_c[0m
+[1.182s] [ 42%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/more_interfaces/msg/detail/address_book__type_support.c.o[0m
+[1.191s] [ 45%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_c.so[0m
+[1.211s] [ 48%] [32m[1mLinking C shared library libmore_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.227s] [ 48%] Built target more_interfaces__rosidl_typesupport_c
+[1.236s] [ 48%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[1.340s] [ 51%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_cpp.so[0m
+[1.348s] [ 54%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[1.371s] [ 54%] Built target more_interfaces__rosidl_typesupport_cpp
+[1.393s] [ 54%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[1.459s] [ 57%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.517s] [ 57%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.524s] [ 60%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.685s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_fastrtps_c[0m
+[1.693s] [ 63%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/more_interfaces/msg/detail/address_book__type_support_c.cpp.o[0m
+[1.952s] [ 66%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.009s] [ 66%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[2.023s] [ 66%] Built target more_interfaces
+[2.032s] [35m[1mScanning dependencies of target publish_address_book[0m
+[2.039s] [ 69%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.051s] [ 72%] [32mBuilding CXX object CMakeFiles/publish_address_book.dir/src/publish_address_book.cpp.o[0m
+[2.332s] [ 72%] Built target more_interfaces__py
+[2.341s] [35m[1mScanning dependencies of target more_interfaces__python[0m
+[2.351s] [ 75%] [32mBuilding C object CMakeFiles/more_interfaces__python.dir/rosidl_generator_py/more_interfaces/msg/_address_book_s.c.o[0m
+[2.418s] [ 78%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/libmore_interfaces__python.so[0m
+[2.447s] [ 78%] Built target more_interfaces__python
+[2.456s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_c__pyext[0m
+[2.456s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[2.456s] [35m[1mScanning dependencies of target more_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.468s] [ 84%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.468s] [ 84%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.471s] [ 87%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.533s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[2.533s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[2.537s] [ 96%] [32m[1mLinking CXX shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[2.561s] [ 96%] Built target more_interfaces__rosidl_typesupport_c__pyext
+[2.561s] [ 96%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.588s] [ 96%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.190s] [100%] [32m[1mLinking CXX executable publish_address_book[0m
+[4.327s] [100%] Built target publish_address_book
+[4.335s] Invoked command in '/home/student/dev_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12
+[4.378s] Invoking command in '/home/student/dev_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/more_interfaces
+[4.384s] -- Install configuration: ""
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/ament_index/resource_index/rosidl_interfaces/more_interfaces
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__functions.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__struct.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__type_support.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__type_support.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__functions.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__struct.h
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__functions.c
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__functions.c
+[4.385s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/address_book.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/adress_book.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/library_path.sh
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/library_path.dsv
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so
+[4.386s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so" to ""
+[4.386s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.386s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.386s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__rosidl_typesupport_fastrtps_c.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__rosidl_typesupport_fastrtps_c.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.386s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.386s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.386s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.387s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.387s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/dds_fastrtps
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__rosidl_typesupport_fastrtps_cpp.hpp
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__rosidl_typesupport_fastrtps_cpp.hpp
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.387s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.387s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.387s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.387s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.387s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__rosidl_typesupport_introspection_c.h
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__type_support.c
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__type_support.c
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__rosidl_typesupport_introspection_c.h
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so
+[4.388s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.388s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so
+[4.388s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so" to ""
+[4.388s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.389s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.389s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__struct.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__builder.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__builder.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__struct.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__traits.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__traits.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/address_book.hpp
+[4.389s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/adress_book.hpp
+[4.389s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces
+[4.389s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg
+[4.389s] -- Up-to-date: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__type_support.cpp
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/address_book__rosidl_typesupport_introspection_cpp.hpp
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__type_support.cpp
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/include/more_interfaces/msg/detail/adress_book__rosidl_typesupport_introspection_cpp.hpp
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.390s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so
+[4.390s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/pythonpath.sh
+[4.390s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/pythonpath.dsv
+[4.391s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/__init__.py
+[4.412s] Compiling '/home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/__init__.py'...
+[4.415s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg
+[4.415s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg/_address_book_s.c
+[4.415s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg/_address_book.py
+[4.415s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg/_adress_book.py
+[4.416s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg/_adress_book_s.c
+[4.416s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/msg/__init__.py
+[4.416s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[4.416s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.416s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[4.417s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.417s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[4.417s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/python3.8/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.417s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__python.so
+[4.418s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/libmore_interfaces__python.so" to ""
+[4.418s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/msg/AddressBook.idl
+[4.418s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/msg/AddressBook.msg
+[4.418s] -- Installing: /home/student/dev_ws/install/more_interfaces/lib/more_interfaces/publish_address_book
+[4.419s] -- Set runtime path of "/home/student/dev_ws/install/more_interfaces/lib/more_interfaces/publish_address_book" to ""
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/ament_index/resource_index/package_run_dependencies/more_interfaces
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/ament_index/resource_index/parent_prefix_path/more_interfaces
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.sh
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.dsv
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/path.sh
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/environment/path.dsv
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/local_setup.bash
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/local_setup.sh
+[4.419s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/local_setup.zsh
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/local_setup.dsv
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/package.dsv
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/ament_index/resource_index/packages/more_interfaces
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_generator_cExport.cmake
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.420s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_generator_cppExport.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.421s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig-version.cmake
+[4.422s] -- Installing: /home/student/dev_ws/install/more_interfaces/share/more_interfaces/package.xml
+[4.424s] Invoked command in '/home/student/dev_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/student/dev_ws/build/more_interfaces

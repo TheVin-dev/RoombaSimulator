@@ -1,0 +1,42 @@
+[0.846s] Invoking command in '/home/student/dev_ws/src/RoomboSimator': PYTHONPATH=/home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RoomboSimator build --build-base /home/student/dev_ws/build/RoomboSimator/build install --prefix /home/student/dev_ws/install/RoomboSimator --record /home/student/dev_ws/build/RoomboSimator/install.log --single-version-externally-managed
+[1.203s] running egg_info
+[1.203s] creating ../../build/RoomboSimator/RoomboSimator.egg-info
+[1.203s] writing ../../build/RoomboSimator/RoomboSimator.egg-info/PKG-INFO
+[1.204s] writing dependency_links to ../../build/RoomboSimator/RoomboSimator.egg-info/dependency_links.txt
+[1.204s] writing entry points to ../../build/RoomboSimator/RoomboSimator.egg-info/entry_points.txt
+[1.204s] writing requirements to ../../build/RoomboSimator/RoomboSimator.egg-info/requires.txt
+[1.204s] writing top-level names to ../../build/RoomboSimator/RoomboSimator.egg-info/top_level.txt
+[1.210s] writing manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+[1.299s] reading manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+[1.300s] writing manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+[1.301s] running build
+[1.301s] running build_py
+[1.301s] creating /home/student/dev_ws/build/RoomboSimator/build
+[1.301s] creating /home/student/dev_ws/build/RoomboSimator/build/lib
+[1.302s] creating /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+[1.302s] copying RoomboSimator/statemachine.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+[1.302s] copying RoomboSimator/Robot.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+[1.302s] copying RoomboSimator/BatteryManagement.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+[1.303s] copying RoomboSimator/__init__.py -> /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator
+[1.303s] running install
+[1.305s] running install_lib
+[1.307s] creating /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+[1.307s] copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/statemachine.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+[1.307s] copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/Robot.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+[1.308s] copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/BatteryManagement.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+[1.308s] copying /home/student/dev_ws/build/RoomboSimator/build/lib/RoomboSimator/__init__.py -> /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator
+[1.308s] byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/statemachine.py to statemachine.cpython-38.pyc
+[1.310s] byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/Robot.py to Robot.cpython-38.pyc
+[1.311s] byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/BatteryManagement.py to BatteryManagement.cpython-38.pyc
+[1.312s] byte-compiling /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator/__init__.py to __init__.cpython-38.pyc
+[1.312s] running install_data
+[1.313s] creating /home/student/dev_ws/install/RoomboSimator/share/ament_index
+[1.313s] creating /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index
+[1.313s] creating /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index/packages
+[1.314s] copying resource/RoomboSimator -> /home/student/dev_ws/install/RoomboSimator/share/ament_index/resource_index/packages
+[1.314s] copying package.xml -> /home/student/dev_ws/install/RoomboSimator/share/RoomboSimator
+[1.314s] running install_egg_info
+[1.316s] Copying ../../build/RoomboSimator/RoomboSimator.egg-info to /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator-0.0.0-py3.8.egg-info
+[1.318s] running install_scripts
+[1.345s] writing list of installed files to '/home/student/dev_ws/build/RoomboSimator/install.log'
+[1.376s] Invoked command in '/home/student/dev_ws/src/RoomboSimator' returned '0': PYTHONPATH=/home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RoomboSimator build --build-base /home/student/dev_ws/build/RoomboSimator/build install --prefix /home/student/dev_ws/install/RoomboSimator --record /home/student/dev_ws/build/RoomboSimator/install.log --single-version-externally-managed

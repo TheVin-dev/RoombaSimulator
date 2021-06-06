@@ -1,0 +1,2 @@
+Invoking command in '/home/student/dev_ws/build/cpp_srvcli': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli
+Invoked command in '/home/student/dev_ws/build/cpp_srvcli' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/student/dev_ws/cpp_srvcli -DCMAKE_INSTALL_PREFIX=/home/student/dev_ws/install/cpp_srvcli

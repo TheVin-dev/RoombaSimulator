@@ -1,0 +1,18 @@
+running egg_info
+writing ../../build/RoomboSimator/RoomboSimator.egg-info/PKG-INFO
+writing dependency_links to ../../build/RoomboSimator/RoomboSimator.egg-info/dependency_links.txt
+writing entry points to ../../build/RoomboSimator/RoomboSimator.egg-info/entry_points.txt
+writing requirements to ../../build/RoomboSimator/RoomboSimator.egg-info/requires.txt
+writing top-level names to ../../build/RoomboSimator/RoomboSimator.egg-info/top_level.txt
+reading manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+writing manifest file '../../build/RoomboSimator/RoomboSimator.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/RoomboSimator/RoomboSimator.egg-info to /home/student/dev_ws/install/RoomboSimator/lib/python3.8/site-packages/RoomboSimator-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/student/dev_ws/build/RoomboSimator/install.log'

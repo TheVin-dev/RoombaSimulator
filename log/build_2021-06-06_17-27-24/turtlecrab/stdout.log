@@ -1,0 +1,50 @@
+running egg_info
+creating ../../build/turtlecrab/turtlecrab.egg-info
+writing ../../build/turtlecrab/turtlecrab.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtlecrab/turtlecrab.egg-info/dependency_links.txt
+writing entry points to ../../build/turtlecrab/turtlecrab.egg-info/entry_points.txt
+writing requirements to ../../build/turtlecrab/turtlecrab.egg-info/requires.txt
+writing top-level names to ../../build/turtlecrab/turtlecrab.egg-info/top_level.txt
+writing manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+reading manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/dev_ws/build/turtlecrab/build
+creating /home/student/dev_ws/build/turtlecrab/build/lib
+creating /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+copying turtlecrab/holo_driver.py -> /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+copying turtlecrab/__init__.py -> /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+running install
+running install_lib
+creating /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+copying /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab/holo_driver.py -> /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+copying /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab/__init__.py -> /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+byte-compiling /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab/holo_driver.py to holo_driver.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/student/dev_ws/install/turtlecrab/share/ament_index
+creating /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index
+creating /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index/packages
+copying resource/turtlecrab -> /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index/packages
+copying package.xml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab
+creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+copying launch/slam_toolbox.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+copying launch/nav_alternative.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+copying launch/nav_core.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config
+creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+copying config/slam/slam_localization.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+copying config/slam/slam_async.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/controller_dwb.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/amcl.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/recoveries.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/waypoint.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/bt_navigator.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+copying config/nav/planner.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+running install_egg_info
+Copying ../../build/turtlecrab/turtlecrab.egg-info to /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab-0.0.1-py3.8.egg-info
+running install_scripts
+Installing holo_driver script to /home/student/dev_ws/install/turtlecrab/lib/turtlecrab
+writing list of installed files to '/home/student/dev_ws/build/turtlecrab/install.log'

@@ -1,0 +1,24 @@
+[0.010s] Invoking command in '/home/student/dev_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12
+[0.031s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.047s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.047s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.179s] -- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.180s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.183s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.283s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.301s] -- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.340s] -- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.341s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.454s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.454s]   rosidl_generate_interfaces() the passed file 'msg/AddressBook.msg' doesn't
+[0.454s]   exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.454s]   '/home/student/dev_ws/src/more_interfaces'
+[0.454s] Call Stack (most recent call first):
+[0.454s]   CMakeLists.txt:30 (rosidl_generate_interfaces)
+[0.454s] 
+[0.454s] 
+[0.455s] -- Configuring incomplete, errors occurred!
+[0.455s] See also "/home/student/dev_ws/build/more_interfaces/CMakeFiles/CMakeOutput.log".
+[0.455s] See also "/home/student/dev_ws/build/more_interfaces/CMakeFiles/CMakeError.log".
+[0.459s] make: *** [Makefile:792: cmake_check_build_system] Error 1
+[0.460s] Invoked command in '/home/student/dev_ws/build/more_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/student/dev_ws/build/more_interfaces -- -j12 -l12

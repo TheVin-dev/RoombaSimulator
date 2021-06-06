@@ -1,0 +1,51 @@
+[1.289s] Invoking command in '/home/student/dev_ws/src/turtlecrab': PYTHONPATH=/home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlecrab build --build-base /home/student/dev_ws/build/turtlecrab/build install --prefix /home/student/dev_ws/install/turtlecrab --record /home/student/dev_ws/build/turtlecrab/install.log --single-version-externally-managed
+[1.620s] running egg_info
+[1.620s] creating ../../build/turtlecrab/turtlecrab.egg-info
+[1.620s] writing ../../build/turtlecrab/turtlecrab.egg-info/PKG-INFO
+[1.620s] writing dependency_links to ../../build/turtlecrab/turtlecrab.egg-info/dependency_links.txt
+[1.620s] writing entry points to ../../build/turtlecrab/turtlecrab.egg-info/entry_points.txt
+[1.621s] writing requirements to ../../build/turtlecrab/turtlecrab.egg-info/requires.txt
+[1.621s] writing top-level names to ../../build/turtlecrab/turtlecrab.egg-info/top_level.txt
+[1.622s] writing manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+[1.650s] reading manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+[1.651s] writing manifest file '../../build/turtlecrab/turtlecrab.egg-info/SOURCES.txt'
+[1.651s] running build
+[1.651s] running build_py
+[1.651s] creating /home/student/dev_ws/build/turtlecrab/build
+[1.651s] creating /home/student/dev_ws/build/turtlecrab/build/lib
+[1.651s] creating /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+[1.651s] copying turtlecrab/holo_driver.py -> /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+[1.651s] copying turtlecrab/__init__.py -> /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab
+[1.651s] running install
+[1.652s] running install_lib
+[1.653s] creating /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+[1.653s] copying /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab/holo_driver.py -> /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+[1.653s] copying /home/student/dev_ws/build/turtlecrab/build/lib/turtlecrab/__init__.py -> /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab
+[1.653s] byte-compiling /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab/holo_driver.py to holo_driver.cpython-38.pyc
+[1.655s] byte-compiling /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab/__init__.py to __init__.cpython-38.pyc
+[1.655s] running install_data
+[1.655s] creating /home/student/dev_ws/install/turtlecrab/share/ament_index
+[1.656s] creating /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index
+[1.656s] creating /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index/packages
+[1.656s] copying resource/turtlecrab -> /home/student/dev_ws/install/turtlecrab/share/ament_index/resource_index/packages
+[1.656s] copying package.xml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab
+[1.656s] creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+[1.656s] copying launch/slam_toolbox.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+[1.656s] copying launch/nav_alternative.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+[1.656s] copying launch/nav_core.launch.py -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/launch
+[1.657s] creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config
+[1.657s] creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+[1.657s] copying config/slam/slam_localization.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+[1.657s] copying config/slam/slam_async.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/slam
+[1.657s] creating /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/controller_dwb.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/amcl.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/recoveries.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/waypoint.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/bt_navigator.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] copying config/nav/planner.yaml -> /home/student/dev_ws/install/turtlecrab/share/turtlecrab/config/nav
+[1.657s] running install_egg_info
+[1.658s] Copying ../../build/turtlecrab/turtlecrab.egg-info to /home/student/dev_ws/install/turtlecrab/lib/python3.8/site-packages/turtlecrab-0.0.1-py3.8.egg-info
+[1.659s] running install_scripts
+[1.675s] Installing holo_driver script to /home/student/dev_ws/install/turtlecrab/lib/turtlecrab
+[1.675s] writing list of installed files to '/home/student/dev_ws/build/turtlecrab/install.log'

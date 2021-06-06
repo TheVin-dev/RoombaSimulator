@@ -1,0 +1,53 @@
+[0.000000] (-) TimerEvent: {}
+[0.000402] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.000480] (-) JobUnselected: {'identifier': 'my_package'}
+[0.001374] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.001433] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.001463] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.100057] (-) TimerEvent: {}
+[0.191024] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/home/student/dev_ws/build/py_pubsub/build', 'install', '--prefix', '/home/student/dev_ws/install/py_pubsub', '--record', '/home/student/dev_ws/build/py_pubsub/install.log', '--single-version-externally-managed'], 'cwd': '/home/student/dev_ws/src/py_pubsub', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'student', 'LC_TIME': 'nl_NL.UTF-8', 'SSH_AGENT_PID': '1207', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/student', 'OLDPWD': '/home/student/dev_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'nl_NL.UTF-8', 'MANAGERPID': '926', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'student', 'JOURNAL_STREAM': '8:43009', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'student', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/student/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/MinorAR:@/tmp/.ICE-unix/1250,unix/MinorAR:/tmp/.ICE-unix/1250', 'INVOCATION_ID': '567e7dbeac5943a8b50fd961bfd03efe', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'nl_NL.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2e57a0a8_ad3c_4d7f_a3ee_947b5f97da21', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'nl_NL.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.149', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'nl_NL.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'nl_NL.UTF-8', '_colon_cd_root': '/home/student/ros2_install', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'nl_NL.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/student/dev_ws/build/py_pubsub', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'nl_NL.UTF-8', 'LC_PAPER': 'nl_NL.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.200153] (-) TimerEvent: {}
+[0.300453] (-) TimerEvent: {}
+[0.360521] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[0.361047] (py_pubsub) StdoutLine: {'line': b'creating ../../build/py_pubsub/py_pubsub.egg-info\n'}
+[0.361314] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[0.361582] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[0.361840] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[0.362137] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[0.362234] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[0.365447] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.397532] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.398268] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.398657] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[0.398985] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[0.399169] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/build/py_pubsub/build\n'}
+[0.399284] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/build/py_pubsub/build/lib\n'}
+[0.399363] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub\n'}
+[0.399436] (py_pubsub) StdoutLine: {'line': b'copying py_pubsub/subscriber_member_function.py -> /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub\n'}
+[0.399515] (py_pubsub) StdoutLine: {'line': b'copying py_pubsub/publisher_member_function.py -> /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub\n'}
+[0.399588] (py_pubsub) StdoutLine: {'line': b'copying py_pubsub/__init__.py -> /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub\n'}
+[0.399661] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[0.400025] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[0.400613] (-) TimerEvent: {}
+[0.401720] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub\n'}
+[0.401925] (py_pubsub) StdoutLine: {'line': b'copying /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub/subscriber_member_function.py -> /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub\n'}
+[0.402138] (py_pubsub) StdoutLine: {'line': b'copying /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub/publisher_member_function.py -> /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub\n'}
+[0.402230] (py_pubsub) StdoutLine: {'line': b'copying /home/student/dev_ws/build/py_pubsub/build/lib/py_pubsub/__init__.py -> /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub\n'}
+[0.402421] (py_pubsub) StdoutLine: {'line': b'byte-compiling /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/subscriber_member_function.py to subscriber_member_function.cpython-38.pyc\n'}
+[0.403708] (py_pubsub) StdoutLine: {'line': b'byte-compiling /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/publisher_member_function.py to publisher_member_function.cpython-38.pyc\n'}
+[0.404122] (py_pubsub) StdoutLine: {'line': b'byte-compiling /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/__init__.py to __init__.cpython-38.pyc\n'}
+[0.404443] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[0.405063] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/install/py_pubsub/share/ament_index\n'}
+[0.405272] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/install/py_pubsub/share/ament_index/resource_index\n'}
+[0.405459] (py_pubsub) StdoutLine: {'line': b'creating /home/student/dev_ws/install/py_pubsub/share/ament_index/resource_index/packages\n'}
+[0.405568] (py_pubsub) StdoutLine: {'line': b'copying resource/py_pubsub -> /home/student/dev_ws/install/py_pubsub/share/ament_index/resource_index/packages\n'}
+[0.405647] (py_pubsub) StdoutLine: {'line': b'copying package.xml -> /home/student/dev_ws/install/py_pubsub/share/py_pubsub\n'}
+[0.405721] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.407464] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/student/dev_ws/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info\n'}
+[0.408253] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[0.424515] (py_pubsub) StdoutLine: {'line': b'Installing listener script to /home/student/dev_ws/install/py_pubsub/lib/py_pubsub\n'}
+[0.424907] (py_pubsub) StdoutLine: {'line': b'Installing talker script to /home/student/dev_ws/install/py_pubsub/lib/py_pubsub\n'}
+[0.425202] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/home/student/dev_ws/build/py_pubsub/install.log'\n"}
+[0.439957] (py_pubsub) CommandEnded: {'returncode': 0}
+[0.448771] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[0.449700] (-) EventReactorShutdown: {}

@@ -1,0 +1,1 @@
+/home/student/dev_ws/build/turtlesim/rosidl_typesupport_introspection_c/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_c.h

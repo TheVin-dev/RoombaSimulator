@@ -1,0 +1,28 @@
+running develop
+running egg_info
+writing ../../build/roombasimulator/roombasimulator.egg-info/PKG-INFO
+writing dependency_links to ../../build/roombasimulator/roombasimulator.egg-info/dependency_links.txt
+writing entry points to ../../build/roombasimulator/roombasimulator.egg-info/entry_points.txt
+writing requirements to ../../build/roombasimulator/roombasimulator.egg-info/requires.txt
+writing top-level names to ../../build/roombasimulator/roombasimulator.egg-info/top_level.txt
+reading manifest file '../../build/roombasimulator/roombasimulator.egg-info/SOURCES.txt'
+writing manifest file '../../build/roombasimulator/roombasimulator.egg-info/SOURCES.txt'
+running build
+running build_py
+copying roombasimulator/Robot.py -> /home/student/dev_ws/build/roombasimulator/build/lib/roombasimulator
+running install
+running install_lib
+creating /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator
+copying /home/student/dev_ws/build/roombasimulator/build/lib/roombasimulator/statemachine.py -> /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator
+copying /home/student/dev_ws/build/roombasimulator/build/lib/roombasimulator/Robot.py -> /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator
+copying /home/student/dev_ws/build/roombasimulator/build/lib/roombasimulator/BatteryManagement.py -> /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator
+copying /home/student/dev_ws/build/roombasimulator/build/lib/roombasimulator/__init__.py -> /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator
+byte-compiling /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator/statemachine.py to statemachine.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator/Robot.py to Robot.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator/BatteryManagement.py to BatteryManagement.cpython-38.pyc
+byte-compiling /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator/__init__.py to __init__.cpython-38.pyc
+running install_data
+running install_egg_info
+Copying ../../build/roombasimulator/roombasimulator.egg-info to /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/student/dev_ws/build/roombasimulator/install.log'

@@ -1,0 +1,16 @@
+/home/student/dev_ws/install/cpp_parameters/lib/cpp_parameters/parameter_node
+/home/student/dev_ws/install/cpp_parameters/share/ament_index/resource_index/package_run_dependencies/cpp_parameters
+/home/student/dev_ws/install/cpp_parameters/share/ament_index/resource_index/parent_prefix_path/cpp_parameters
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/environment/ament_prefix_path.sh
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/environment/ament_prefix_path.dsv
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/environment/path.sh
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/environment/path.dsv
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/local_setup.bash
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/local_setup.sh
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/local_setup.zsh
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/local_setup.dsv
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/package.dsv
+/home/student/dev_ws/install/cpp_parameters/share/ament_index/resource_index/packages/cpp_parameters
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/cmake/cpp_parametersConfig.cmake
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/cmake/cpp_parametersConfig-version.cmake
+/home/student/dev_ws/install/cpp_parameters/share/cpp_parameters/package.xml

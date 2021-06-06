@@ -1,0 +1,17 @@
+[0.900s] Invoking command in '/home/student/dev_ws/build/roombasimulator': PYTHONPATH=/home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/roombasimulator --editable --build-directory /home/student/dev_ws/build/roombasimulator/build --no-deps install_data --install-dir /home/student/dev_ws/install/roombasimulator
+[1.282s] running develop
+[1.502s] running egg_info
+[1.502s] writing roombasimulator.egg-info/PKG-INFO
+[1.502s] writing dependency_links to roombasimulator.egg-info/dependency_links.txt
+[1.502s] writing entry points to roombasimulator.egg-info/entry_points.txt
+[1.503s] writing requirements to roombasimulator.egg-info/requires.txt
+[1.503s] writing top-level names to roombasimulator.egg-info/top_level.txt
+[1.560s] reading manifest file 'roombasimulator.egg-info/SOURCES.txt'
+[1.561s] writing manifest file 'roombasimulator.egg-info/SOURCES.txt'
+[1.630s] running build_ext
+[1.631s] Creating /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/site.py
+[1.643s] Creating /home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages/roombasimulator.egg-link (link to .)
+[1.643s] 
+[1.643s] Installed /home/student/dev_ws/build/roombasimulator
+[1.643s] running install_data
+[1.689s] Invoked command in '/home/student/dev_ws/build/roombasimulator' returned '0': PYTHONPATH=/home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/roombasimulator --editable --build-directory /home/student/dev_ws/build/roombasimulator/build --no-deps install_data --install-dir /home/student/dev_ws/install/roombasimulator
