@@ -1,4 +1,4 @@
-# BatteryRobot
+# RoombaSimulator
 
 BatteryRobot is an package for ROS2 foxy 
 the goal is to add a battery system to the turtlebot3 simulations, using a state machine 
