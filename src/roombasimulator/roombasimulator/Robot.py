@@ -42,6 +42,7 @@ class pose():
         phi=0 
         return phi 
 
+
 class Robot(Node,BatteryManager):
     states_list = ['Idle', 'Moving', 'Charging','Error']
     trans = [
@@ -60,7 +61,7 @@ class Robot(Node,BatteryManager):
     def __init__(self):
         super().__init__('BatteryPoweredRobot')
         BatteryManager.__init__(self)
-        self.goal_list = [NavigateToPose.Goal()] * 12
+        self.goal_list = dict(zip(range(0,8),[NavigateToPose.Goal()] * 9))
         #create publishers and subscribers 
         self._odomlistener = self.create_subscription(Odometry,'/odom',self.OdomCallback,10)
         self._goallistener = self.create_subscription(PoseStamped,'/goal_pose',self.goalListener,1)
@@ -188,7 +189,8 @@ class Robot(Node,BatteryManager):
     #Entry points states
     def PickGoal(self):
         print("Picking new goal")
-        self.new_goal = np.random.choice(self.goal_list)
+        id = np.random.choice(list(self.goal_list.keys))
+        self.new_goal = self.goal_list[id]
         time.sleep(5)
         
         
