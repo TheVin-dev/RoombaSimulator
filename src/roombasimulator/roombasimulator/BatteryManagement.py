@@ -1,5 +1,4 @@
 import sys
-from timer import perpetualTimer
 
 class BatteryManager(): 
     # consumption moving to goal state
@@ -38,6 +37,34 @@ class BatteryManager():
             #self.BatteryLevel = BatteryThreshold
             
 
+
+
+from threading import Timer,Thread,Event
+import time
+
+class perpetualTimer():
+
+    def __init__(self,t,hFunction):
+
+        self.t=t
+        self.hFunction = hFunction
+        self.thread = Timer(self.t,self.handle_function)
+        self.level = 0 
+    def handle_function(self):
+        self.hFunction()
+        self.thread = Timer(self.t,self.handle_function)
+        self.thread.start()
+
+    def start(self):
+        self.thread.start()
+
+    def cancel(self):
+        self.thread.cancel()
+
+
+    def callbacktimer(self):
+        print('ipsem lorem')
+        self.level +=1 
 
         
 
