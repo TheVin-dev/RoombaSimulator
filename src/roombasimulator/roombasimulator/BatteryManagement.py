@@ -1,6 +1,12 @@
 import sys
+import threading
 from threading import Timer,Thread,Event
 import time
+
+
+
+
+
 class BatteryManager(): 
     # consumption moving to goal state
     Energy_consumed_per_Meter = 0.005 # energy / meter
@@ -9,11 +15,11 @@ class BatteryManager():
     
     # charge rate for charging state
     chargeRate = 0.1 # batterylvl / s 
-    CHARGE_TIMERVAL = 1
-    BatteryThreshold = .1
+    TIMERVAL = 1
+    BatteryThreshold = .65
     def __init__(self, level =1.0):
         self.BatteryLevel = level
-        self.timer = perpetualTimer(self.CHARGE_TIMERVAL,self.IdleConsumption)
+        self.timer = perpetualTimer(self.TIMERVAL,self.IdleConsumption)
         
     def chargeBattery(self,charge):
         remaining = 1 - charge
@@ -24,20 +30,24 @@ class BatteryManager():
             if (self.BatteryLevel >=1): 
                 self.BatteryLevel = 1 
                 return None
+
             time.sleep(1)
-
+    
     def IdleConsumption(self):
-        self.BatteryLevel -= self.CHARGE_TIMERVAL * self.IDLE_CONSUMPTION
-        print("Current level: {0:.3f}| Currently using {1:.3f} Energy/s".format(self.BatteryLevel,0.1))
+        if (self.timer.is_alive):
+            self.BatteryLevel -= self.TIMERVAL * self.IDLE_CONSUMPTION
+            print("BatteryLevel: {:.2f}".format(self.BatteryLevel))    
+            if self.BatteryLevel < self.BatteryThreshold:
+                print("Running out")
+                self.timer.cancel()
+                self.timer.is_alive = False
+                return True
 
-            #self.BatteryLevel = BatteryThreshold
-            
 
 
 
 
-
-class perpetualTimer():
+class perpetualTimer(Thread):
 
     def __init__(self,t,hFunction):
 
@@ -54,11 +64,16 @@ class perpetualTimer():
         self.thread.start()
 
     def cancel(self):
+        print("Shutdown timer")
         self.thread.cancel()
         
 
 
 
+
+
 if __name__== "__main__":
     bat = BatteryManager()
-    bat.timer.start()
+    batlow = bat.timer.start()
+    print(batlow)
+  
