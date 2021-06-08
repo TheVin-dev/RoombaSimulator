@@ -4,12 +4,11 @@ import rclpy
 if __name__ == "__main__":
     rclpy.init()
     robot = Robot()
-    robot.start_IdleConsumption()
-    time.sleep(20)
-    print(robot.BatteryLevel)
-    robot.end_IdleConsumption()
+    
 
-    print(f"test succesvol")
+    print(robot.state)
+    robot.to_Idle()
+    print(robot.state)
     # args = None
     # robot = Robot()
 
@@ -17,4 +16,4 @@ if __name__ == "__main__":
     # robotMachine = Robot()
     
     # rclpy.spin(robotMachine)
-    # rclpy.shutdown()
+    # rclpy.shutdown()  

@@ -1,5 +1,6 @@
 import sys
-
+from threading import Timer,Thread,Event
+import time
 class BatteryManager(): 
     # consumption moving to goal state
     Energy_consumed_per_Meter = 0.005 # energy / meter
@@ -9,7 +10,7 @@ class BatteryManager():
     # charge rate for charging state
     chargeRate = 0.1 # batterylvl / s 
     CHARGE_TIMERVAL = 1
-    BatteryThreshold = 0.8
+    BatteryThreshold = .1
     def __init__(self, level =1.0):
         self.BatteryLevel = level
         self.timer = perpetualTimer(self.CHARGE_TIMERVAL,self.IdleConsumption)
@@ -27,20 +28,14 @@ class BatteryManager():
 
     def IdleConsumption(self):
         self.BatteryLevel -= self.CHARGE_TIMERVAL * self.IDLE_CONSUMPTION
-        print("Current level: {0:.3f}| Currently using {0:.3f} Energy/s".format(self.BatteryLevel,0.1))
-        
-        if self.BatteryLevel < self.BatteryThreshold: 
-            print(f"Running out of energy! Get to the charge station!")
-            #TODO: Trigger move to charge
-            self.timer.cancel()
-            sys.exit()
+        print("Current level: {0:.3f}| Currently using {1:.3f} Energy/s".format(self.BatteryLevel,0.1))
+
             #self.BatteryLevel = BatteryThreshold
             
 
 
 
-from threading import Timer,Thread,Event
-import time
+
 
 class perpetualTimer():
 
@@ -60,12 +55,6 @@ class perpetualTimer():
 
     def cancel(self):
         self.thread.cancel()
-
-
-    def callbacktimer(self):
-        print('ipsem lorem')
-        self.level +=1 
-
         
 
 
