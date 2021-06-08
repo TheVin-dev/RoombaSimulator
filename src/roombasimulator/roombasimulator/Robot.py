@@ -1,10 +1,11 @@
+#!usr/bin/ python3
 import BatteryManagement
 from BatteryManagement import BatteryManager
 import transitions
 from transitions import Machine 
 import rclpy
 import numpy as np
-from rclpy import Node 
+from rclpy.node import Node 
 from rclpy.action import ActionClient
 import math
 from geometry_msgs.msg import PoseStamped,Pose, Point
@@ -15,11 +16,9 @@ from nav_msgs.msg import Path
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Header 
 from builtin_interfaces.msg import Time
-from rclpy.qos import QoSDurabilityPolicy, QoSHistoryPolicy, QoSReliabilityPolicy
-from rclpy.qos import QoSProfile
+
 from nav_msgs.msg import Odometry
 from std_msgs.msg import String
-
 import random 
 import time 
 
@@ -59,7 +58,8 @@ class Robot(Node,BatteryManager):
     TIMER_INTERVAL = 1 
 
     def __init__(self):
-        super.__init__('BatteryPoweredRobot')
+        super().__init__('BatteryPoweredRobot')
+        BatteryManager.__init__(self)
         self.goal_list = [NavigateToPose.Goal()] * 12
         #create publishers and subscribers 
         self._odomlistener = self.create_subscription(Odometry,'/odom',self.OdomCallback,10)
@@ -73,34 +73,34 @@ class Robot(Node,BatteryManager):
         self.curr_pose = Pose()
         self.curr_vel = Twist()
         self.curr_goal = None
-        self.dst_remaining = 0
+        self.dst_remaining = 0.
         self.dst = 0 # dst used by initial reachable check
         self.chargeLoc = Pose()
-        self.chargeLoc.position.x = 0 
-        self.chargeLoc.position.y = 0
-        self.chargeLoc.position.z = 0
+        self.chargeLoc.position.x = 0.
+        self.chargeLoc.position.y = 0.
+        self.chargeLoc.position.z = 0.
         # State machine 
         self.machine = Machine( 
         model = self,
         transitions = self.trans,
-        states = self.states,
-        initial = self.STOPPED)
+        states = self.states_list,
+        initial = "Idle")
 
-        # State dependet attributes 
-        self.pwrconsumption = self.idleConsumption
+        
 
 
     # async callbacks from subscribers
     def OdomCallback(self,msg):
         self.curr_pose = msg.Pose
         #self.curr_pose = pose(temp.position.x,temp.position.y,temp.position.z)
+
     def curr_velocity(self,msg):
         self.curr_vel = msg
-
+        dt = 0.5
+        
         # TODO: get interval between messages and calculate dx
-        dx = 0 
-        self.changeBatterylevelMoving(dx)
-
+        #ds = math.sqt(dx*dx + dy*dy)
+        self.changeBatterylevelMoving(ds)
 
     def goalListener(self,msg):
         self.new_goal = msg 
@@ -128,7 +128,7 @@ class Robot(Node,BatteryManager):
     def get_result_navigation(self, future):
         result = future.result().result
         self.get_logger().info('Result: {0}'.format(result))
-    
+        
     # Callbacks for the Compute path to pose action 
     def feedback_pp(self, feedback_msg):
         # er bestaat geen feedback msg for compute path to pose action
@@ -169,6 +169,8 @@ class Robot(Node,BatteryManager):
         self.dst = dst
                 
         reachable = self.goalReachable(self.dst)
+
+
         if reachable:
             print(f"Goal is reachable, executing {self.new_goal.pose.pose.position.x,self.new_goal.pose.pose.position.y} ")
             self.MovetoGoal(self.new_goal)
@@ -181,8 +183,6 @@ class Robot(Node,BatteryManager):
             # 
         # set curr goal to new goal 
         
-        
-
 
 
     #Entry points states
@@ -205,13 +205,14 @@ class Robot(Node,BatteryManager):
         """ 
         Second idle starting point. starting the idle consumption of battery
         """
-        t.start()
-        
+        #self.IdleConsumption()
+        self.timer.start()
         # TODO:start timer callback thread. 
             # if battery gets too low in the callback thread, transition to Charging state
     
     def end_IdleConsumption(self):
-        pass
+        self.timer.cancel()
+        print("timer canceled")
 
     def ChargingCallback(self):
         """ 
@@ -255,6 +256,14 @@ class Robot(Node,BatteryManager):
 
 
     # Helper functions 
+    def goalReachable(self,dst,dst_toCharge):
+        Energy_needed_oneway = dst * self.Energy_consumed_per_Meter
+        if Energy_needed_oneway*1.5 < self.BatteryLevel:
+            return True
+
+        return False
+        #TODO: we need to make sure we can get back to the charging station from the goal 
+        #Energy_needded_toCharge  = dst_toCharge * self.Energy_consumed_per_Meter
 
 
     def stop(self):
@@ -267,12 +276,4 @@ class Robot(Node,BatteryManager):
 
 
 
-if "__name__" =="__main__":
-    args = None
-    robot = Robot()
 
-    rclpy.init(args=args)
-    robotMachine = Robot()
-    
-    rclpy.spin(robotMachine)
-    rclpy.shutdown()

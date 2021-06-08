@@ -1,8 +1,0 @@
-[01m[K/home/student/dev_ws/src/more_interfaces/src/publish_adress_book.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kmore_interfaces/msg/address_book.hpp: No such file or directory
-    5 | #include [01;31m[K"more_interfaces/msg/address_book.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/publish_adress_book.dir/build.make:63: CMakeFiles/publish_adress_book.dir/src/publish_adress_book.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:331: CMakeFiles/publish_adress_book.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-make: *** [Makefile:141: all] Error 2

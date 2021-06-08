@@ -1,1 +1,0 @@
-Invoking command in '/home/student/dev_ws/build/roombasimulator': PYTHONPATH=/home/student/dev_ws/install/roombasimulator/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/dev_ws/install/roombasimulator --uninstall --editable --build-directory /home/student/dev_ws/build/roombasimulator/build

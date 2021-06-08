@@ -1,3 +1,0 @@
-[console_scripts]
-holo_driver = turtlecrab.holo_driver:main
-

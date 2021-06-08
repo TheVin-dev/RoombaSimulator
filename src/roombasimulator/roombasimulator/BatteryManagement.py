@@ -1,13 +1,14 @@
 import sys
-from timer_test import perpetualTimer
+from timer import perpetualTimer
+
 class BatteryManager(): 
     # consumption moving to goal state
-    Energy_consumed_per_Meter = 1 # energy / meter
+    Energy_consumed_per_Meter = 0.005 # energy / meter
     # consumption idle state
-    idleConsumption =0.001 # consuming / s 
+    IDLE_CONSUMPTION =0.1# consuming / s 
     
     # charge rate for charging state
-    chargeRate = 1 # batterylvl / s 
+    chargeRate = 0.1 # batterylvl / s 
     CHARGE_TIMERVAL = 1
     BatteryThreshold = 0.8
     def __init__(self, level =1.0):
@@ -26,30 +27,17 @@ class BatteryManager():
             time.sleep(1)
 
     def IdleConsumption(self):
-        self.BatteryLevel -= self.CHARGE_TIMERVAL * self.idleConsumption
-        print("Current level: {0:.2f}| Currently using {0:.2f} Energy/s".format(self.BatteryLevel,self.chargeRate))
+        self.BatteryLevel -= self.CHARGE_TIMERVAL * self.IDLE_CONSUMPTION
+        print("Current level: {0:.3f}| Currently using {0:.3f} Energy/s".format(self.BatteryLevel,0.1))
         
         if self.BatteryLevel < self.BatteryThreshold: 
             print(f"Running out of energy! Get to the charge station!")
+            #TODO: Trigger move to charge
             self.timer.cancel()
             sys.exit()
             #self.BatteryLevel = BatteryThreshold
             
 
-    def changeBatterylevelMoving(self):
-        print('Timer fires')
-        #self.BatteryLevel -= self.Energy_consumed_per_Meter * dx
-           
-        
-
-    def goalReachable(self,dst,dst_toCharge):
-        Energy_needed_oneway = dst * self.Energy_consumed_per_Meter
-        if Energy_needed_oneway*1.5 < self.BatteryLevel:
-            return True
-
-        return False
-        #TODO: we need to make sure we can get back to the charging station from the goal 
-        #Energy_needded_toCharge  = dst_toCharge * self.Energy_consumed_per_Meter
 
         
 

@@ -1,1 +1,0 @@
-/home/student/dev_ws/src/more_interfaces/msg/AddressBook.msg

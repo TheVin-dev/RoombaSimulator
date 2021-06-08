@@ -1,1 +1,0 @@
-/home/student/dev_ws/build/turtlesim/rosidl_cmake/srv/Spawn_Request.msg
