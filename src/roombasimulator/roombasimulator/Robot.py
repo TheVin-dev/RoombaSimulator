@@ -27,8 +27,8 @@ import sys
 class Robot(Node):
     states_list = ['initial','Idle', 'Moving', 'Charging','Error']
     trans = [
-    { 'trigger': 'to_Idle', 'source': 'initial', 'dest': 'Idle', },
-    { 'trigger': 'move', 'source': 'Idle', 'dest': 'Moving'}, # 'conditions': 'enoughCharge'
+    { 'trigger': 'to_Idle', 'source': 'initial', 'dest': 'Idle'},
+    { 'trigger': 'to_Moving', 'source': 'Idle', 'dest': 'Moving','before': 'stopTimer' },
     { 'trigger': 'Charging', 'source': 'Moving', 'dest': 'Charging','conditions': 'arrivedChargeLocation'},
     { 'trigger': 'Idling', 'source': 'Moving', 'dest': 'Idle','conditions': ['NOT arrivedChargeLocation','secondGoalEmpty']}, #NOTE: these condition should be OR 
     { 'trigger': 'MovingfromCharge', 'source':'Charging', 'dest': 'Moving','conditions': 'BatteryFull'},
@@ -42,8 +42,7 @@ class Robot(Node):
     def __init__(self):
         super().__init__('BatteryPoweredRobot')
         #BatteryManager.__init__(self)
-        self.BatteryManager = BatteryManager()
-
+       
         self.goal_list = dict(zip(range(0,8),[NavigateToPose.Goal()] * 9))
         #create publishers and subscribers 
         self._odomlistener = self.create_subscription(Odometry,'/odom',self.OdomCallback,10)
@@ -70,8 +69,11 @@ class Robot(Node):
         states = self.states_list,
         initial = "initial") 
 
-        self.primaryGoal = None
-        self.secondaryGoal = None
+        self.BatteryManager = BatteryManager(hFunction=self.to_Moving)
+        
+        self.BatteryManager.primaryGoal= None
+        self.BatteryManager.secondaryGoal= None
+        
         self.velocity_timer = time.time()
         
     def on_enter_Idle(self):
@@ -94,6 +96,7 @@ class Robot(Node):
         Entry point function for Moving state
         """
         print("Entered state Moving")
+        print(f"current primary goal: {self.BatteryManager.primaryGoal}")
         # self._action_client_Navigation.wait_for_server()
         # self._send_goal_future = self._action_client_Navigation.send_goal_async(self.curr_goal)
         # self._send_goal_future.add_done_callback(self.goal_response_navigation)    
@@ -122,6 +125,8 @@ class Robot(Node):
                 #ds = math.sqt(dx*dx + dy*dy)
                 self.BatteryManager.changeBatterylevelMoving(ds)
         self.velocity_timer = time.time()
+
+
     def goalListener(self,msg):
         # If we want to incorporate manual goal support (HELLLL NOO)
         #self.new_goal = msg 
@@ -195,11 +200,12 @@ class Robot(Node):
 
 
         if reachable:
-            print(f"Goal is reachable, executing {self.primaryGoal.pose.pose.position.x,self.primaryGoal.pose.pose.position.y} ")
-            self.move()
+            print(f"Goal is reachable, executing {self.BatteryManager.primaryGoal.pose.pose.position.x,self.BatteryManager.primaryGoal.pose.pose.position.y} ")
+            
+            self.to_Moving()
         elif not reachable:
-            self.primaryGoal,self.secondaryGoal = self.chargeLoc,self.primaryGoal
-            self.move()
+            self.BatteryManager.primaryGoal,self.BatteryManager.secondaryGoal = self.chargeLoc,self.primaryGoal
+            self.to_Moving()
         
 
         
@@ -213,46 +219,25 @@ class Robot(Node):
         time.sleep(3)
         # TODO: Check if pathplanning server needs a NavigatetoPose.goal or just an pose 
         print('Goal done!') 
-        self.move()
-        #self._action_client_Pathplanning.wait_for_server()
-        #self._send_goal_future = self._action_client_Pathplanning.send_goal_async(self.primaryGoal)
-        #self._send_goal_future.add_done_callback(self.goal_response_pp)
+        
+        self._action_client_Pathplanning.wait_for_server()
+        self._send_goal_future = self._action_client_Pathplanning.send_goal_async(self.primaryGoal)
+        self._send_goal_future.add_done_callback(self.goal_response_pp)
 
         
-    def start_IdleConsumption(self):
-        """ 
-        Second idle starting point. starting the idle consumption of battery
-        """
-        
-        pass
-        
-
-        # while (self.BatteryManager.BatteryLevel > self.BatteryManager.BatteryThreshold): 
-        #     print(self.BatteryManager.BatteryThreshold,self.BatteryManager.BatteryLevel)
-        #     if (self.BatteryManager.BatteryLevel < self.BatteryManager.BatteryThreshold):
-        #         print('Running out! Get to the charge station! ')
-        #         self.BatteryManager.timer.cancel()
-        #     time.sleep(0.5)
-            # self.BatteryManager.BatteryLevel <= self.BatteryManager.BatteryThreshold: 
-            # print(f"Running out of energy! Get to the charge station!")
-            # #TODO: Trigger move to charge
-            # 
-            # #self.primaryGoal = self.ChargeLoc
-            # #self.secondaryGoal = None
-            # #self.Move()
-            # break
-        # if battery gets too low in the callback thread, transition to Charging state
     
-    def end_IdleConsumption(self):
-        self.BatteryManagertimer.cancel()
+    def stopTimer(self):
+        self.BatteryManager.timer.is_alive()
+        self.BatteryManager.timer.cancel()
+        self.BatteryManager.timer.stop()
+        
         print("timer canceled")
 
 
 
 
     #Triggers state transitions 
-    def move(self):
-        print("Setting state to Moving")
+
 
 
 

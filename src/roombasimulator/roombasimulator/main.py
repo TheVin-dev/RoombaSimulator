@@ -7,13 +7,13 @@ if __name__ == "__main__":
 
     print(robot.state)
     robot.to_Idle()
-    print(robot.state)
-    print(robot.BatteryManager.BatteryLevel)
+    
+
     # args = None
     # robot = Robot()
 
-    # 
+
     # robotMachine = Robot()
-    
+
     # rclpy.spin(robotMachine)
     # rclpy.shutdown()  

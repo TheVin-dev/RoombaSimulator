@@ -17,10 +17,13 @@ class BatteryManager():
     chargeRate = 0.1 # batterylvl / s 
     TIMERVAL = 1
     BatteryThreshold = .65
-    def __init__(self, level =1.0):
+    def __init__(self, level =1.0,hFunction =None):
         self.BatteryLevel = level
         self.timer = perpetualTimer(self.TIMERVAL,self.IdleConsumption)
-        
+        self.hFunction = hFunction
+        self.primaryGoal = None
+        self.secondaryGoal = None
+
     def chargeBattery(self,charge):
         remaining = 1 - charge
         timetoCharge = remaining / self.chargeRate
@@ -29,6 +32,9 @@ class BatteryManager():
             print(f"Battery level: {self.BatteryLevel}")
             if (self.BatteryLevel >=1): 
                 self.BatteryLevel = 1 
+
+                self.hFunction()
+
                 return None
 
             time.sleep(1)
@@ -39,9 +45,13 @@ class BatteryManager():
             print("BatteryLevel: {:.2f}".format(self.BatteryLevel))    
             if self.BatteryLevel < self.BatteryThreshold:
                 print("Running out")
-                self.timer.cancel()
-                self.timer.is_alive = False
-                return True
+                self.timer.is_alive=False
+                self.timer.stop()
+                self.primaryGoal = "Werkt dit???"
+                self.secondaryGoal = None
+                self.hFunction()
+                
+            
 
 
 
@@ -54,7 +64,13 @@ class perpetualTimer(Thread):
         self.t=t
         self.hFunction = hFunction
         self.thread = Timer(self.t,self.handle_function)
-        self.level = 0 
+        self._stop_event = threading.Event()
+
+    def stop(self):
+        print('stopped thread')
+        self._stop_event.set()
+
+
     def handle_function(self):
         self.hFunction()
         self.thread = Timer(self.t,self.handle_function)
