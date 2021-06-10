@@ -42,10 +42,7 @@ class Robot(Node):
    
    ]
 
-
-
-    TIMER_INTERVAL = 1 
-
+   
     def __init__(self):
         super().__init__('BatteryPoweredRobot')
         #BatteryManager.__init__(self)
@@ -58,7 +55,7 @@ class Robot(Node):
         self._action_client_Navigation = ActionClient(self,NavigateToPose,'/navigate_to_pose')
         self._action_client_Pathplanning = ActionClient(self,ComputePathToPose,'/compute_path_to_pose')
         
-        #self._IdleTimer = self.create_timer(self.TIMER_INTERVAL,self.IdleConsumption)
+    
         # set current position and velocity
         self.curr_pose = Pose()
         self.curr_vel = Twist()
@@ -241,13 +238,6 @@ class Robot(Node):
         print("timer canceled")
 
 
-
-
-    #Triggers state transitions 
-
-
-
-
     # Conditions for state transitions
     def enoughCharge(self):
         return True
@@ -370,9 +360,7 @@ def main():
     rclpy.init()
     robot = Robot()
     robot.to_Idle()
-    # print(robot.state)
-    # robot.to_Idle()
-    
+
     rclpy.spin(robot)
     rclpy.shutdown()  
     
