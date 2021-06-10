@@ -1,1 +1,0 @@
-/home/student/dev_ws/build/turtlesim/rosidl_generator_c/turtlesim/msg/detail/color__type_support.h

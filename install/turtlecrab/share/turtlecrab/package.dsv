@@ -1,6 +1,0 @@
-source;share/turtlecrab/hook/pythonpath.ps1
-source;share/turtlecrab/hook/pythonpath.dsv
-source;share/turtlecrab/hook/pythonpath.sh
-source;share/turtlecrab/hook/ament_prefix_path.ps1
-source;share/turtlecrab/hook/ament_prefix_path.dsv
-source;share/turtlecrab/hook/ament_prefix_path.sh

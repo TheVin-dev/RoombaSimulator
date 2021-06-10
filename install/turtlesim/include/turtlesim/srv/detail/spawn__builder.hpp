@@ -1,1 +1,0 @@
-/home/student/dev_ws/build/turtlesim/rosidl_generator_cpp/turtlesim/srv/detail/spawn__builder.hpp

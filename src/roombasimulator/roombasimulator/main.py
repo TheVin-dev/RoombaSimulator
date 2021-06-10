@@ -1,19 +1,23 @@
 from Robot import Robot
 import time
 import rclpy
-if __name__ == "__main__":
+
+def main():
     rclpy.init()
     robot = Robot()
 
-    print(robot.state)
-    robot.to_Idle()
+    # print(robot.state)
+    # robot.to_Idle()
     
 
-    # args = None
-    # robot = Robot()
+    args = None
+    robot = Robot()
 
 
-    # robotMachine = Robot()
+    robotMachine = Robot()
 
-    # rclpy.spin(robotMachine)
-    # rclpy.shutdown()  
+    rclpy.spin(robotMachine)
+    rclpy.shutdown()  
+    
+if __name__ == "__main__":
+    main()

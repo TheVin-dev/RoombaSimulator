@@ -9,6 +9,8 @@ src/py_parameters/
 src/ros_tutorials/
 src/fibonacci_action_server.py
 src/turtlecrab
+install/
+log/
 dev_ws/log
 *.log
 *.env
