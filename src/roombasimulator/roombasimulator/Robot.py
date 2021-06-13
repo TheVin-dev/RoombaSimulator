@@ -15,8 +15,7 @@ import numpy as np
 from rclpy.node import Node 
 from rclpy.action import ActionClient
 import math
-from geometry_msgs.msg import PoseStamped,Pose, Point
-from squaternion import Quaternion
+from geometry_msgs.msg import PoseStamped,Pose, Point,Quaternion
 from nav2_msgs.action import NavigateToPose
 from nav2_msgs.action import ComputePathToPose
 from nav_msgs.msg import Path
@@ -48,10 +47,15 @@ class Robot(Node):
     chargeLoc.position.x = 0.
     chargeLoc.position.y = 0.
     chargeLoc.position.z = 0.
+    
+    farLeft = Pose() 
+    farLeft.position = Point(x=-6.681,y=-3.314,z=0.0)
+    farLeft.orientation = Quaternion(x=0.0,y=0.0,z=0.783,w=0.622)
+    #Far left: (-6.681,-3.314,0,0,0,0.783,0.622)
 
-    goal_list = [Pose() ] * 5
+    goal_list = [farLeft]
     goal_list.insert(0,chargeLoc)
-    d = ["Charge" if x==0  else x for x in range(len(goal_list)) ]
+    d = ["Charge" if x==0  else str(x) for x in range(len(goal_list)) ]
     goalDict = dict(zip(d,goal_list))
 
 
@@ -82,7 +86,7 @@ class Robot(Node):
         states = self.states_list,
         initial = "initial") 
 
-        self.BatteryManager = BatteryManager(self.goalDict,hFunction=self.to_Moving,eFunction=self.to_Error)
+        self.BatteryManager = BatteryManager(self.chargeLoc,hFunction=self.to_Moving,eFunction=self.to_Error)
         
         self.BatteryManager.primaryGoal= None
         self.BatteryManager.secondaryGoal= None
@@ -91,7 +95,7 @@ class Robot(Node):
         
     def on_enter_Idle(self):
         print('Entered the Idle state')
-        self.BatteryManager.timer.start()
+        #self.BatteryManager.timer.start()
        
         self.PickGoal()
 
@@ -113,7 +117,7 @@ class Robot(Node):
 
         print(f"current primary goal: {self.BatteryManager.primaryGoal}")
         # self._action_client_Navigation.wait_for_server()
-        # self._send_goal_future = self._action_client_Navigation.send_goal_async(self.curr_goal)
+        # self._send_goal_future = self._action_client_Navigation.send_goal_async(self.primaryGoal)
         # self._send_goal_future.add_done_callback(self.goal_response_navigation)    
 
     def on_enter_Error(self):
@@ -183,7 +187,7 @@ class Robot(Node):
     def feedback_pp(self, feedback_msg):
         # er bestaat geen feedback msg for compute path to pose action
         #feedback = feedback_msg.feedback
-        pass
+        self.get_logger().info("feedback : {feedback_msg.feedback}")
 
 
     def goal_response_pp(self, future):
@@ -203,8 +207,7 @@ class Robot(Node):
         # path is of type nav_msgs.msg Path -> a sequence<PoseStamped>. 
         poses = future.result().result.path.poses # list() met posestamped als het goed is. 
         # path -> poses -> list(posestamped) -> (Pose, Header) Pose -> position -> x,y,z
-        x = self.curr_pose.position.x
-        y = self.curr_pose.position.y
+
         
         
         dst = 0 
@@ -216,38 +219,48 @@ class Robot(Node):
             dy = (poses[i+1].pose.position.y - poses[i].pose.position.y)
             dst += math.sqrt(dx*dx + dy*dy)
 
-        self.dst = dst
-                
-        reachable = self.goalReachable(self.dst)
+        
+        print(f"Calculated distance to be: {dst}")        
+        reachable = self.goalReachable(dst)
 
-
-        if reachable:
+        if reachable & self.machine.is_state("Moving"):
             print(f"Goal is reachable, executing {self.BatteryManager.primaryGoal.pose.pose.position.x,self.BatteryManager.primaryGoal.pose.pose.position.y} ")
             
             self.to_Moving()
         elif not reachable:
             self.BatteryManager.primaryGoal,self.BatteryManager.secondaryGoal = self.chargeLoc,self.primaryGoal
-            self.to_Moving()
-        
+            self.to_Moving()    
+        print("Done calculating path and handled case")
+
 
         
 
 
     #Entry points states
     def PickGoal(self):
-        print("Picking new goal")
-        id = np.random.choice(list(self.BatteryManager.goalDict.keys()))
-        self.primaryGoal = self.BatteryManager.goalDict.get(id)
-        time.sleep(3)
-        # TODO: Check if pathplanning server needs a NavigatetoPose.goal or just an pose 
-        print('Done picking goal!') 
-        time.sleep(2)
-        print("Calculating path")
-       
-        self._action_client_Pathplanning.wait_for_server()
-        self._send_goal_future = self._action_client_Pathplanning.send_goal_async(self.primaryGoal)
-        self._send_goal_future.add_done_callback(self.goal_response_pp)
+        print("Picking new goal and calculating path")
+        id = np.random.choice(list(self.goalDict.keys()))
+        print(self.goalDict)
+        goal= self.goalDict.get(id) #Pose
+        print(f"Picked: {id};goal:{goal}")
+        self.BatteryManager.primaryGoal = NavigateToPose.Goal() 
+        goalstamped = PoseStamped() # creating a PoseStamped
+        goalstamped.pose = goal 
+        goalstamped.header.stamp = Time()
+        goalstamped.header.frame_id = 'map'
 
+        self.BatteryManager.primaryGoal.pose = goalstamped
+        
+        pathGoal = ComputePathToPose.Goal()
+        pathGoal.pose = goalstamped
+        pathGoal.planner_id = "1"
+        self._action_client_Pathplanning.wait_for_server()
+        self._send_goal_future = self._action_client_Pathplanning .send_goal_async(pathGoal)
+        self._send_goal_future.add_done_callback(self.goal_response_pp)
+        
+
+
+        
         
     
     def stopTimer(self):
@@ -309,10 +322,10 @@ class BatteryManager():
     chargeRate = 0.1 # batterylvl / s 
     TIMERVAL = 1
     BatteryThreshold = .65
-    def __init__(self,goalDict, level =1.0,hFunction =None,eFunction = None):
+    def __init__(self,chargeLoc, level =1.0,hFunction =None,eFunction = None):
         self.BatteryLevel = level
         self.timer = perpetualTimer(self.TIMERVAL,self.IdleConsumption)
-        self.goalDict = goalDict
+        self.chargeLoc = chargeLoc
 
 
         self.to_move = hFunction
@@ -330,7 +343,7 @@ class BatteryManager():
             if (self.BatteryLevel >=1): 
                 self.BatteryLevel = 1 
 
-                #TODO: Switch primary and secondary goals?
+                
                 self.to_move()
                
 
@@ -348,8 +361,8 @@ class BatteryManager():
                     print("Running out")
                     #self.timer.is_alive=False
                     #self.timer.stop()
-                    self.primaryGoal = self.goalDict['Charge']
-                    self.secondaryGoal = None
+                    self.primaryGoal = self.chargeLoc
+                    #self.secondaryGoal = None
                     self.to_move()
                 
             
@@ -390,7 +403,7 @@ class perpetualTimer(Thread):
 def main():
     rclpy.init()
     robot = Robot()
-    robot.BatteryManager.BatteryLevel = 0.02
+    #robot.BatteryManager.BatteryLevel = 0.02
     robot.to_Idle()
     #robot.to_Charging()
     rclpy.spin(robot)
