@@ -3,7 +3,9 @@ src/cpp_parameters/
 src/cpp_pubsub/
 src/more_interfaces/
 src/fibonacci_action_client.py
-src/fibonacci_action_client.py
+src/fibonacci_action_client
+*.data
+*.posegraph
 src/Num.msg
 src/py_parameters/
 src/ros_tutorials/
