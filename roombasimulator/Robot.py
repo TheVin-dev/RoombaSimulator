@@ -1,13 +1,12 @@
 #!usr/bin/ python3
-#import BatteryManagement
-#from BatteryManagement import BatteryManager
+
 
 
 import sys
 import threading
 from threading import Timer,Thread,Event
 import time
-
+from roombasimulator.BatteryManagement import BatteryManager
 import transitions
 from transitions import Machine 
 import rclpy
