@@ -1,7 +1,6 @@
 #!usr/bin/ python3
-#import BatteryManagement
-#from BatteryManagement import BatteryManager
-
+from BatteryManagement import BatteryManager
+#from roombasimulator.BatteryManagement import BatteryManager
 
 import sys
 import threading
@@ -131,7 +130,7 @@ class Robot(Node):
 
     # async callbacks from subscribers
     def OdomCallback(self,msg):
-        self.curr_pose = msg.Pose
+        self.curr_pose = msg.pose
        
 
     def curr_velocity(self,msg):
@@ -140,7 +139,7 @@ class Robot(Node):
         
         print("velocties: {:.2f}, {:.2f}".format(msg.linear.x,msg.linear.y))
         print("Time elasped: {:.2f}, equal to rate: {:.2f}".format(dt, 1/dt))
-        if self.machine.is_state('Moving'):
+        if self.machine.is_state(model=self,state='Moving'):
             self.curr_vel = msg
             vx = msg.linear.x 
             vy = msg.linear.y 
@@ -207,9 +206,9 @@ class Robot(Node):
         # path is of type nav_msgs.msg Path -> a sequence<PoseStamped>. 
         poses = future.result().result.path.poses # list() met posestamped als het goed is. 
         # path -> poses -> list(posestamped) -> (Pose, Header) Pose -> position -> x,y,z
-
-        
-        
+        print(self.curr_pose)
+        print([f for f in dir(future)])
+        print(poses)
         dst = 0 
         for i in range(len(poses)-1):
             #if i ==len(poses)-1:
@@ -223,7 +222,7 @@ class Robot(Node):
         print(f"Calculated distance to be: {dst}")        
         reachable = self.goalReachable(dst)
 
-        if reachable & self.machine.is_state("Moving"):
+        if reachable & self.machine.is_state(model=self,state="Moving"):
             print(f"Goal is reachable, executing {self.BatteryManager.primaryGoal.pose.pose.position.x,self.BatteryManager.primaryGoal.pose.pose.position.y} ")
             
             self.to_Moving()
@@ -239,7 +238,8 @@ class Robot(Node):
     #Entry points states
     def PickGoal(self):
         print("Picking new goal and calculating path")
-        id = np.random.choice(list(self.goalDict.keys()))
+        id ='1'# np.random.choice(list(self.goalDict.keys()))
+
         print(self.goalDict)
         goal= self.goalDict.get(id) #Pose
         print(f"Picked: {id};goal:{goal}")
@@ -254,10 +254,10 @@ class Robot(Node):
         pathGoal = ComputePathToPose.Goal()
         pathGoal.pose = goalstamped
         pathGoal.planner_id = "1"
-        self._action_client_Pathplanning.wait_for_server()
+        #self._action_client_Pathplanning.wait_for_server()
         self._send_goal_future = self._action_client_Pathplanning .send_goal_async(pathGoal)
         self._send_goal_future.add_done_callback(self.goal_response_pp)
-        
+        print(f"Send goal to action server")
 
 
         
@@ -289,8 +289,8 @@ class Robot(Node):
 
     # Helper functions 
     def goalReachable(self,dst,dst_toCharge=0):
-        Energy_needed_oneway = dst * self.Energy_consumed_per_Meter
-        if Energy_needed_oneway*1.5 < self.BatteryLevel:
+        Energy_needed_oneway = dst * self.BatteryManager.Energy_consumed_per_Meter
+        if Energy_needed_oneway*1.5 < self.BatteryManager.BatteryLevel:
             return True
 
         return False
@@ -312,98 +312,13 @@ class Robot(Node):
 
 
 
-class BatteryManager(): 
-    # consumption moving to goal state
-    Energy_consumed_per_Meter = 0.005 # energy / meter
-    # consumption idle state
-    IDLE_CONSUMPTION =0.01# consuming / s 
-    
-    # charge rate for charging state
-    chargeRate = 0.1 # batterylvl / s 
-    TIMERVAL = 1
-    BatteryThreshold = .65
-    def __init__(self,chargeLoc, level =1.0,hFunction =None,eFunction = None):
-        self.BatteryLevel = level
-        self.timer = perpetualTimer(self.TIMERVAL,self.IdleConsumption)
-        self.chargeLoc = chargeLoc
-
-
-        self.to_move = hFunction
-        self.to_error = eFunction
-        self.primaryGoal = None
-        self.secondaryGoal = None
-
-    def chargeBattery(self):
-        inittial_charge = self.BatteryLevel
-        remaining = 1 - inittial_charge
-        timetoCharge = remaining / self.chargeRate
-        while (self.BatteryLevel < 1):
-            self.BatteryLevel +=self.chargeRate
-            print(f"Battery level: {self.BatteryLevel}")
-            if (self.BatteryLevel >=1): 
-                self.BatteryLevel = 1 
-
-                
-                self.to_move()
-               
-
-            time.sleep(1)
-    
-    def IdleConsumption(self):
-        if (self.timer.is_alive):
-            self.BatteryLevel -= self.TIMERVAL * self.IDLE_CONSUMPTION
-            print("BatteryLevel: {:.2f}".format(self.BatteryLevel))
-            if self.BatteryLevel <=0: 
-                print("Battery died! Need maintenance! ")
-                self.timer.is_alive=False
-                self.to_error()
-                if self.BatteryLevel < self.BatteryThreshold:
-                    print("Running out")
-                    #self.timer.is_alive=False
-                    #self.timer.stop()
-                    self.primaryGoal = self.chargeLoc
-                    #self.secondaryGoal = None
-                    self.to_move()
-                
-            
-
-
-
-
-
-class perpetualTimer(Thread):
-
-    def __init__(self,t,hFunction):
-
-        self.t=t
-        self.hFunction = hFunction
-        self.thread = Timer(self.t,self.handle_function)
-        self._stop_event = threading.Event()
-
-    def stop(self):
-        #print('stopped thread')
-        self._stop_event.set()
-
-
-    def handle_function(self):
-        self.hFunction()
-        self.thread = Timer(self.t,self.handle_function)
-        self.thread.start()
-
-    def start(self):
-        self.thread.start()
-
-    def cancel(self):
-        print("Shutdown timer")
-        self.thread.cancel()
-        
-
 
   
 def main():
     rclpy.init()
     robot = Robot()
     #robot.BatteryManager.BatteryLevel = 0.02
+    robot._action_client_Pathplanning.wait_for_server()
     robot.to_Idle()
     #robot.to_Charging()
     rclpy.spin(robot)
