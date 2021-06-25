@@ -1,0 +1,1 @@
+ros2 launch turtlecrab nav_core.launch.py map:='/home/student/dev_ws/src/roombasimulator/map/housemap.yaml'
